@@ -406,34 +406,32 @@ if(NOT MSVC)
   set(CMAKE_REQUIRED_LIBRARIES rt)
   check_function_exists(clock_gettime HAVE_CLOCK_GETTIME)
   set(CMAKE_REQUIRED_LIBRARIES)
+  message("HAVE_CLOCK_GETTIME: ${HAVE_CLOCK_GETTIME}")
 
   set(CMAKE_REQUIRED_INCLUDES unistd.h)
   check_function_exists(fork HAVE_FORK)
   set(CMAKE_REQUIRED_INCLUDES)
+  message("HAVE_FORK: ${HAVE_FORK}")
 
   set(CMAKE_REQUIRED_INCLUDES sys/time.h)
   check_function_exists(gethrtime HAVE_GETHRTIME)
-  check_function_exists(clock_gettime HAVE_CLOCK_GETTIME)
   set(CMAKE_REQUIRED_INCLUDES)
+  message("HAVE_GETHRTIME: ${HAVE_GETHRTIME}")
 
   set(CMAKE_REQUIRED_INCLUDES stdlib.h)
   check_function_exists(mkdtemp HAVE_MKDTEMP)
   set(CMAKE_REQUIRED_INCLUDES)
+  message("HAVE_MKDTEMP: ${HAVE_MKDTEMP}")
 
   set(CMAKE_REQUIRED_INCLUDES sys/socket.h)
   check_function_exists(accept4 HAVE_ACCEPT4)
   set(CMAKE_REQUIRED_INCLUDES)
-
+  message("HAVE_ACCEPT4: ${HAVE_ACCEPT4}")
 
   set(CMAKE_REQUIRED_INCLUDES string.h)
   check_function_exists(strnlen HAVE_STRNLEN)
   set(CMAKE_REQUIRED_INCLUDES)
-
-  message("HAVE_CLOCK_GETTIME: ${HAVE_CLOCK_GETTIME}")
-  message("HAVE_FORK: ${HAVE_FORK}")
-  message("HAVE_GETHRTIME: ${HAVE_GETHRTIME}")
-  message("HAVE_MKDTEMP: ${HAVE_MKDTEMP}")
-  message("HAVE_ACCEPT4: ${HAVE_ACCEPT4}")
+  message("HAVE_STRNLEN: ${HAVE_STRNLEN}")
 
 endif()
 

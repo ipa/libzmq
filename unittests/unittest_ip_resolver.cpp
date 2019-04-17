@@ -18,6 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include <unity.h>
+
 #include "../tests/testutil.hpp"
 #include "../unittests/unittest_resolver_common.hpp"
 
